@@ -1,0 +1,6 @@
+.bhs-custum-fields		{ width: 100%; }
+.bhs-custum-fields label  { 
+	display: block; 
+	text-align: left;
+}
+.bhs-custum-fields input  { width: 100%; }

@@ -1,0 +1,21 @@
+header {
+	#top-add {
+		text-align: center;
+		padding: 20px 30px;
+		background-color: $primary-color;
+		color: $light-color;
+		text-transform: uppercase;
+		a { 
+			margin-left: 5px;
+			text-decoration: underline; 
+		}
+	}
+	ul {
+		li {
+			display: inline-block;
+			a {
+				
+			}
+		}		
+	}
+}
