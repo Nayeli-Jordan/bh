@@ -5,13 +5,13 @@
 // Colors
 // ==========================================================================
 
-$primary-color: 		#de0d88 !default;
-$primary-color-light: 	lighten($primary-color, 15%) !default;
-$primary-color-dark: 	darken($primary-color, 15%) !default;
+$primary-color: 		#056564 !default; //Verde oscuro
+$primary-color-light: 	#34bca4 !default; //Verde claro
+$primary-color-dark: 	darken($primary-color, 5%) !default; //Verde oscuro dark
 
 $light-color: 			#fff !default;
 $dark-color: 			#000 !default;
-$gray-color: 			#e1e1e1 !default;
+$gray-color: 			#f3f3f3 !default;
 $danger-color: 			#c30008 !default;
 $notice-color: 			#007bd4 !default;
 $succes-color: 			#3fa944 !default;

@@ -45,6 +45,8 @@ small                         { font-size: 75%; }
 .font-normal                  { font-weight: $font-normal; }
 .font-strong, strong          { font-weight: $font-strong; }
 
+.font-size-medium             { font-size: $default-fontsize * 1.5; }
+
 .uppercase                    { text-transform: uppercase; }
 .lowercase                    { text-transform: lowercase; }
 .capitalize                   { text-transform: capitalize; }

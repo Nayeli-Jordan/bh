@@ -2,6 +2,7 @@
 // ==========================================================================
 
 .color-primary 			{ color: $primary-color; }
+.color-primary-light 	{ color: $primary-color-light; }
 
 .color-light 			{ color: $light-color; }
 .color-dark 			{ color: $dark-color; }
@@ -12,3 +13,6 @@
 // ==========================================================================
 
 .bg-light 				{ background-color: $light-color; }
+.bg-gray 				{ background-color: $gray-color; }
+.bg-primary 			{ background-color: $primary-color; }
+.bg-primary-light		{ background-color: $primary-color-light; }

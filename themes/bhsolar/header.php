@@ -59,63 +59,8 @@
 	<body>
 		<header class="js-header">
 			<div id="top-add">
-			<?php /* Anuncio */
-			$add_args = array(
-				'post_type' 		=> 'add',
-				'posts_per_page' 	=> 1,
-		        'orderby' 			=> 'rand'
-			);
-			$add_query = new WP_Query( $add_args );
-			if ( $add_query->have_posts() ) : 
-				$i = 1;
-				while ( $add_query->have_posts() ) : $add_query->the_post(); 
-					$custom_fields  = get_post_custom();
-		    		$post_id        = get_the_ID();
-		    		$enlace      	= get_post_meta( $post_id, 'add_enlace', true );
-		    		$enlaceText   	= get_post_meta( $post_id, 'add_enlaceText', true ); ?>
-
-		    			<p><?php echo the_title();
-		    			if ($enlace != '' && $enlaceText != '') { ?>
-							<a href="<?php echo $enlace; ?>"> <?php echo $enlaceText; ?></a></p>
-		    			<?php } 
-
-		    	$i ++; endwhile; wp_reset_postdata();
-			endif; ?>
+				<p><a href="#">Calcula tu ahorro</a> al usar páneles solares</p>
 				<em id="close-add" class="icon-close"></em>	
 			</div>
-
-
-			<nav>
-				<ul class="mb-nav" itemscope>
-					<!-- <?php
-						$menu_name = 'top_menu';
-
-						if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
-							$menu = wp_get_nav_menu_object( $locations[ $menu_name ]);
-							$menu_items = wp_get_nav_menu_items( $menu->term_id );
-							$menu_list = '';
-							foreach ( (array) $menu_items as $key => $menu_item) {
-
-								$url 				= $menu_item->url;
-								$title 				= $menu_item->title;
-								$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
-
-								//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-								//$id 				= $menu_item->ID;
-								//$attr_title 		= $menu_item->attr_title;
-								//$description		= $menu_item->description;
-								//$xfn 				= $menu_item->xfn;
-								//$type 			= $menu_item->type;		taxonomy, page...
-								//$type_label		= $menu_item->type_label;		página, categoría...
-								//$slug 			= sanitize_title( $menu_item->title );
-								//$slugId				= $menu_item->post_name;
-
-								$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
-							}
-						}
-						echo $menu_list;
-					?>	 -->					
-				</ul>
-			</nav>
 		</header>
 		<div class="[ main-body ]">
