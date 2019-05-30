@@ -7,10 +7,11 @@
 
 $primary-color: 		#056564 !default; //Verde oscuro
 $primary-color-light: 	#34bca4 !default; //Verde claro
-$primary-color-dark: 	darken($primary-color, 5%) !default; //Verde oscuro dark
+$primary-color-dark: 	#013232 !default; //Verde oscuro dark
 
 $light-color: 			#fff !default;
 $dark-color: 			#000 !default;
+$gray-color-dark:		#b2b2b2 !default;
 $gray-color: 			#f3f3f3 !default;
 $danger-color: 			#c30008 !default;
 $notice-color: 			#007bd4 !default;
@@ -68,9 +69,21 @@ $size-percent:			100 !default;
 }
 $font-default: 			"Montserrat-Regular", sans-serif !default;
 
-$font-thin: 			200 !default;
-$font-normal: 			400 !default;
-$font-strong: 			600 !default;
+@font-face {
+    font-family: 'Montserrat-Medium';
+    font-style: normal;
+    font-weight: 500;
+	src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+$font-default-semibold: "Montserrat-Medium", sans-serif !default;
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: 600;
+	src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+$font-default-bold: 	"Montserrat-Bold", sans-serif !default;
 
 // Header Styles
 $default-fontsize: 		16px !default;

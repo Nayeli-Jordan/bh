@@ -2,7 +2,6 @@
 // ==========================================================================
 
 html {
-  color: $primary-color;
   box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +19,6 @@ html {
 
 section {
 	margin: 0;
-  & + section { margin-top: 50px; }
 }
 
 ul {
@@ -40,6 +38,11 @@ ul {
     height: 1px;
     border: 0px;
     background-color: $light-color;
+}
+
+.cursor-pointer { 
+  cursor: pointer; 
+  @include transition(.3s ease-out);
 }
 
 

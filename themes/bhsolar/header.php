@@ -57,10 +57,10 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<header class="js-header">
+		<header class="js-header relative">
 			<div id="top-add">
 				<p><a href="#">Calcula tu ahorro</a> al usar páneles solares</p>
-				<em id="close-add" class="icon-close"></em>	
+				<em id="close-add" class="icon-cancel cursor-pointer color-primary-dark-hover"></em>	
 			</div>
 		</header>
 		<div class="[ main-body ]">

@@ -3,10 +3,13 @@
 
 .color-primary 			{ color: $primary-color; }
 .color-primary-light 	{ color: $primary-color-light; }
+.color-primary-dark 	{ color: $primary-color-dark; }
 
 .color-light 			{ color: $light-color; }
 .color-dark 			{ color: $dark-color; }
 .color-gray 			{ color: $gray-color; }
+
+.color-primary-dark-hover:hover 	{ color: $primary-color-dark; }
 
 
 // Bg Color
@@ -16,3 +19,4 @@
 .bg-gray 				{ background-color: $gray-color; }
 .bg-primary 			{ background-color: $primary-color; }
 .bg-primary-light		{ background-color: $primary-color-light; }
+.bg-opacity-light		{ background-color: rgba(255,255,255,0.35); }

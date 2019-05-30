@@ -36,4 +36,35 @@ add_action('init', function(){
 	);
 	register_post_type( 'add', $args );	
 
+	// Faqs
+	$labels = array(
+		'name'          => 'FAQ',
+		'singular_name' => 'FAQ',
+		'add_new'       => 'Nuevo FAQ',
+		'add_new_item'  => 'Nuevo FAQ',
+		'edit_item'     => 'Editar FAQ',
+		'new_item'      => 'Nuevo FAQ',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver FAQ',
+		'search_items'  => 'Buscar FAQ',
+		'not_found'     => 'No hay FAQ.',
+		'menu_name'     => 'FAQ'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'faqs' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor' )
+	);
+	register_post_type( 'faqs', $args );	
+
 });

@@ -28,6 +28,11 @@ var $=jQuery.noConflict();
 
 		// } 
 
+		/* Header Add */
+		$("#close-add").click(function() {
+			$('#top-add').hide();
+		});
+
 		// Modal
 		$(".open-modal").click(function() {
 			var idModal = $(this).attr('id');

@@ -4,14 +4,17 @@
 input:not([type="submit"]),
 select,
 textarea {
-	margin-bottom: 10px;
 	padding: 0 10px;
 	width: 100%;	
 	max-width: 100%;
-	line-height: 30px;
+	font-size: $default-fontsize;
+  	font-family: $font-default;
+	line-height: 40px;
+	text-align: center;
 	background-color: $light-color;
-	border-radius: 10px;
+	border-radius: 0px;
 	border: 0px;
+	border-bottom: 1px solid $primary-color-light;
 	outline: none;
 }
 textarea {
@@ -21,6 +24,10 @@ textarea {
 }
 input[type="submit"] {
     display: block;
+    line-height: 35px;
+    border-radius: 3px;
+    background-color: $primary-color-light;
+    @extend .shadow;
 }
 
 //Hide button input date
@@ -36,5 +43,30 @@ input[type="submit"] {
 	li { 
 		color: $danger-color; 
 		list-style-type: none!important;
+	}
+}
+
+/* Contact form 7 */
+#form-contacto {
+	input:not([type="submit"]),
+	textarea {
+		margin-top: 15px;
+	}
+	input[type="submit"] {
+		margin-top: 10px;
+		@extend .margin-auto;
+	}
+	span.wpcf7-not-valid-tip {
+		text-align: right;
+		font-size: 12px;
+	}
+	.wpcf7-response-output { 
+		padding: 0px;
+		margin: 0px;
+		margin-top: 15px;
+		color: $primary-color-dark;
+		font-size: 12px;
+		@extend .font-semibold;
+		border: 0px;
 	}
 }

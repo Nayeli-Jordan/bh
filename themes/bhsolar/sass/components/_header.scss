@@ -1,13 +1,19 @@
 header {
 	#top-add {
 		text-align: center;
-		padding: 20px 30px;
-		background-color: $primary-color;
+		padding: 10px 30px;
+		background-color: $primary-color-light;
 		color: $light-color;
 		text-transform: uppercase;
+		@include transition(.3s ease-out);
 		a { 
 			margin-left: 5px;
 			text-decoration: underline; 
+		}
+		#close-add {
+			position: absolute;
+			right: 15px;
+			top: 10px;
 		}
 	}
 }
