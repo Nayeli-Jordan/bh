@@ -3027,7 +3027,7 @@ input[type="submit"]:hover {
 /* line 17, ../sass/components/_effects.scss */
 .shadow, .btn,
 button,
-input[type="submit"], .icon-fondo {
+input[type="submit"], .icon-fondo, .faqs {
   box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
 }
 
@@ -3205,17 +3205,11 @@ ul li {
 
 /* line 58, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
-  border-radius: 0px;
+  border-radius: 5px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* ::-webkit-scrollbar-button {
-      background-color: black;
-}
-::-webkit-scrollbar-corner {
-      background-color: black;
-} */
 /* line 1, ../sass/components/_grid.scss */
 .container {
   margin: 0 auto;
@@ -9064,7 +9058,7 @@ small {
 }
 
 /* line 48, ../sass/components/_typography.scss */
-.font-strong, strong {
+.font-strong, .faqs .item-faq.active h3, strong {
   font-family: "Montserrat-Bold", sans-serif;
 }
 
@@ -9154,6 +9148,50 @@ small {
 /* line 5, ../sass/components/_utilities.scss */
 .border-top-gray {
   border-top: 1px solid #b2b2b2;
+}
+
+/* line 7, ../sass/components/_utilities.scss */
+.faqs {
+  max-height: 320px;
+  overflow: auto;
+}
+/* line 11, ../sass/components/_utilities.scss */
+.faqs::-webkit-scrollbar {
+  width: 8px;
+}
+/* line 14, ../sass/components/_utilities.scss */
+.faqs::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* line 18, ../sass/components/_utilities.scss */
+.faqs .item-faq {
+  border-bottom: 1px solid #e1e1e1;
+}
+/* line 20, ../sass/components/_utilities.scss */
+.faqs .item-faq h3 {
+  padding: 15px 25px;
+  cursor: pointer;
+}
+/* line 23, ../sass/components/_utilities.scss */
+.faqs .item-faq h3:hover {
+  color: #056564;
+}
+/* line 25, ../sass/components/_utilities.scss */
+.faqs .item-faq .content-faq {
+  display: none;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+/* line 30, ../sass/components/_utilities.scss */
+.faqs .item-faq.active {
+  background-color: #f3f3f3;
+}
+/* line 33, ../sass/components/_utilities.scss */
+.faqs .item-faq.active .content-faq {
+  display: block;
 }
 
 /* line 2, ../sass/components/_header.scss */

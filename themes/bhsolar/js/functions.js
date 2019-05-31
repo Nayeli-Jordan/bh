@@ -33,6 +33,17 @@ var $=jQuery.noConflict();
 			$('#top-add').hide();
 		});
 
+		/* Faqs */
+		$(".item-faq").click(function() {
+			var idFaq = $(this).attr('id');
+			if ( $('#' + idFaq).hasClass('active') ) {
+				$('#' + idFaq).removeClass('active');
+			} else {
+				$('.item-faq').removeClass('active');
+				$('#' + idFaq).addClass('active');
+			}
+		});
+
 		// Modal
 		$(".open-modal").click(function() {
 			var idModal = $(this).attr('id');

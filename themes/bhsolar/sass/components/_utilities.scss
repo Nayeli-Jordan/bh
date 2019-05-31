@@ -3,3 +3,34 @@
 // ==========================================================================
 
 .border-top-gray { border-top: 1px solid $gray-color-dark; }
+
+.faqs {
+	max-height: 320px;
+    overflow: auto;
+	@extend .shadow;
+	&::-webkit-scrollbar {
+	    width: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+	    border-radius: 10px;
+	    background-color: rgba(0,0,0,0.4);
+	}
+	.item-faq {
+		border-bottom: 1px solid #e1e1e1;
+		h3 {
+			padding: 15px 25px;
+			cursor: pointer;
+			&:hover { color: $primary-color; }
+		}
+		.content-faq {
+			display: none;
+			padding: 10px 20px;
+			@include transition(.3s ease-out);
+		}
+		&.active {
+			background-color: $gray-color;
+			h3 { @extend .font-strong; }
+			.content-faq { display: block; }
+		}
+	}
+}

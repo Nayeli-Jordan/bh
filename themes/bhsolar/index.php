@@ -56,7 +56,8 @@
 			$post_id = get_the_ID();?>
 			<div id="faq_<?php echo $post_id; ?>" class="item-faq">
 				<h3><?php the_title(); ?></h3>
-			<?php the_content(); ?></div>			
+				<div class="content-faq"><?php the_content(); ?></div>
+			</div>			
 		<?php $i ++; endwhile; wp_reset_postdata();
 	endif;  ?>
 	</div>
