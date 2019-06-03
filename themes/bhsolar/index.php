@@ -1,61 +1,86 @@
 <?php get_header(); ?>
-<section id="initial-banner" class="bg-image text-center padding-top-130 padding-bottom-190" style="background-image: url('<?php echo THEMEPATH; ?>images/celdas-solares-inicio.jpg')">
+<section id="initial-banner" class="bg-image text-center padding-top-130 padding-bottom-190" style="background-image: url('<?php echo get_the_post_thumbnail_url(35, "large"); ?>')">
 	<div class="container">
-		<img class="responsive-img margin-bottom-30" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
-		<h2 class="uppercase color-primary-dark max-width-600 margin-auto"><strong>Caminemos juntos hacia la energía sustentable</strong></h2>		
+		<img class="responsive-img margin-bottom-30 wow fadeIn" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
+		<h2 class="uppercase color-primary-dark max-width-600 margin-auto wow fadeInLeft"><strong><?php echo get_the_title(35); ?></strong></h2>		
 	</div>
 </section>
+<?php 
+	$id 		= 36; 
+	$post 		= get_post($id); 
+	$content 	= apply_filters('the_content', $post->post_content);
+?>
 <section class="container text-center padding-top-bottom-60">
-	<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto">Generar tu propia energía está al alcance de tus manos</p>
-	<p>Somos una empresa de sistemas solares para casas y comercios. Nuestros clientes usan el sol como una fuente limpia e inagotable para consumir electricidad a un costo sustancialmente menor, con mayor claridad y una estupenda esperiencia. Esto lo logramos con una plataforma tecnológica comprobada. <br>Infinitamente orgullosos de ser parte del cambio.</p>
-	<div class="max-width-600 margin-auto margin-top-20">
+	<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto  wow fadeInLeft"><?php echo get_the_title(36); ?></p>
+	<p class="wow fadeIn"><?php echo $content; ?></p>
+	<div class="max-width-600 margin-auto wow fadeIn margin-top-20">
 		<div class="cycle-slideshow" data-cycle-fx=shuffle data-cycle-speed=1500 data-cycle-easing=easeInOutBack data-cycle-ease-out=easeOutBack data-cycle-timeout=2000 data-cycle-slides="> div">
-			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares1.jpg')"></div>
-			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares2.jpg')"></div>
-			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares3.jpg')"></div>
-			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares4.jpg')"></div>
-			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares5.jpg')"></div>
-			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares6.jpg')"></div>
+		<?php
+		$slider_args = array(
+			'post_type' 		=> 'slider',
+			'posts_per_page' 	=> 10,
+			'order'				=> 'ASC',
+		);
+		$slider_query = new WP_Query( $slider_args );
+		if ( $slider_query->have_posts() ) : 
+			while ( $slider_query->have_posts() ) : $slider_query->the_post(); ?>
+				<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"></div>		
+			<?php endwhile; wp_reset_postdata();
+		endif;  ?>
 		</div>
 	</div>
 </section>
+<?php 
+	$id 		= 37; 
+	$post 		= get_post($id); 
+	$content 	= apply_filters('the_content', $post->post_content);
+?>
 <section class="bg-primary-light text-center padding-top-bottom-60">
 	<div class="container">
-		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto color-light">¿Cómo funcionan los páneles solares?</p>
+		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft color-light"><?php echo get_the_title(37); ?></p>
 		<div class="row">
-			<div class="col s12 m10 offset-m1 l8 offset-l2">
-				<iframe class="width-100p" src="https://www.youtube.com/embed/pFJ96wUZT7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="col s12 m10 offset-m1 l8 offset-l2 wow fadeIn">
+				<?php echo $content; ?>
 			</div>
 		</div>
 	</div>
 </section>
 <section class="container text-center padding-top-60 padding-bottom-30">
-	<p class="font-size-medium font-semibold max-width-600 margin-auto">Un medio de energía renovable, no contaminate y disponible en todo el planeta</p>
-	<em class="icon-leaf icon-superlarge"></em>
+	<p class="font-size-medium font-semibold max-width-600 margin-auto wow fadeInLeft"><?php echo get_the_title(38); ?></p>
+	<em class="icon-leaf icon-superlarge block wow slideInUp"></em>
 </section>
 <section class="bg-primary color-light text-center padding-top-bottom-60">
 	<div class="container">
-		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto">Con BH Solar nuestros clientes ahora pagan hasta un 97% menos de luz</p>
+		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft"><?php echo get_the_title(39); ?></p>
 		<div class="row margin-bottom-10">
-			<div class="col s12 m6 l4 margin-bottom-20">
-				<em class="icon-sun icon-superlarge margin-bottom-20"></em>
-				<p>Convertimos la energía solar en electricidad que genera beneficios al instante</p>
-			</div>
-			<div class="col s12 m6 l4 margin-bottom-20">
-				<em class="icon-plug icon-superlarge margin-bottom-20"></em>
-				<p>Llegamos de manera imperceptible y con el servicio habitual, a todo tipo de dispositivos y luminarias eléctricas que requieran potencia</p>
-			</div>
-			<div class="col s12 m6 offset-m3 l4 margin-bottom-20">
-				<em class="icon-child icon-superlarge margin-bottom-20"></em>
-				<p>Toda la energía solar generada y sin uso, va de regreso a la red eléctrica del servicio BH Solar y se convierte en ahorros para ti</p>
-			</div>
+		<?php
+		$iconos_args = array(
+			'post_type' 		=> 'iconos',
+			'posts_per_page' 	=> 3,
+			'order'				=> 'ASC',
+		);
+		$iconos_query = new WP_Query( $iconos_args );
+		if ( $iconos_query->have_posts() ) : 
+			$i = 1;
+			while ( $iconos_query->have_posts() ) : $iconos_query->the_post(); 
+				$post_id = get_the_ID();?>
+				<?php if ($i === 3) { ?>
+					<div class="col s12 m6 offset-m3 l4 margin-bottom-20">
+				<?php } else { ?>
+					<div class="col s12 m6 l4 margin-bottom-20">
+				<?php } ?>
+						<em class="<?php the_title(); ?> icon-superlarge margin-bottom-20 block wow bounceIn"></em>
+						<div class="wow fadeIn"><?php the_content(); ?></div>
+					</div>			
+			<?php $i ++; endwhile; wp_reset_postdata();
+		endif;  ?>
 		</div>
-		<p>Cámbiate a energía solar y <a href="<?php echo SITEURL; ?>#section-contacto" class="color-primary-light text-underline">empieza a ahorrar hoy</a></p>
+		<p class="wow fadeInRight">Cámbiate a energía solar y <a href="<?php echo SITEURL; ?>#section-contacto" class="color-primary-light text-underline">empieza a ahorrar hoy</a></p>
 	</div>
 </section>
 <section class="container padding-top-bottom-60">
-	<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto text-center">Preguntas frecuentes</p>
-	<div class="faqs">
+	<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft text-center">Preguntas frecuentes</p>
+	<div class="faqs wow fadeIn">
 	<?php
 	$faqs_args = array(
 		'post_type' 		=> 'faqs',
@@ -78,27 +103,36 @@
 <section id="bg-paneles-solares" class="bg-image text-center padding-top-60 padding-bottom-40 relative">
 	<div class="bg-absolute bg-opacity-light"></div>
 	<div class="container relative">
-		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto">¿Sabias que con páneles solares puedes...?</p>
+		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft"><?php echo get_the_title(40); ?></p>
 		<div class="row">
-			<div class="col s12 m6 l4 margin-bottom-20">
-				<em class="icon-wind icon-superlarge icon-fondo margin-bottom-20"></em>
-				<p class="font-semibold">Disminuir las emisiones de CO2</p>
-			</div>
-			<div class="col s12 m6 l4 margin-bottom-20">
-				<em class="icon-tree icon-superlarge icon-fondo margin-bottom-20"></em>
-				<p class="font-semibold">Evitar que se destruyan más ecosistemas naturales</p>
-			</div>
-			<div class="col s12 m6 offset-m3 l4 margin-bottom-20">
-				<em class="icon-globe icon-superlarge icon-fondo margin-bottom-20"></em>
-				<p class="font-semibold">Fomentar el crecimiento de un mundo más limpio</p>
-			</div>
+			<?php
+			$iconosround_args = array(
+				'post_type' 		=> 'iconosround',
+				'posts_per_page' 	=> 3,
+				'order'				=> 'ASC',
+			);
+			$iconosround_query = new WP_Query( $iconosround_args );
+			if ( $iconosround_query->have_posts() ) : 
+				$i = 1;
+				while ( $iconosround_query->have_posts() ) : $iconosround_query->the_post(); 
+					$post_id = get_the_ID();?>
+					<?php if ($i === 3) { ?>
+						<div class="col s12 m6 offset-m3 l4 margin-bottom-20">
+					<?php } else { ?>
+						<div class="col s12 m6 l4 margin-bottom-20">
+					<?php } ?>
+							<em class="<?php the_title(); ?> icon-superlarge icon-fondo margin-bottom-20 wow pulse"></em>
+							<div class="font-semibold wow fadeIn"><?php the_content(); ?></div>
+						</div>			
+				<?php $i ++; endwhile; wp_reset_postdata();
+			endif;  ?>
 		</div>
 	</div>
 </section>
 <section id="section-contacto" class="container text-center padding-top-bottom-60">
-	<h3 class="margin-bottom-30 max-width-600 margin-auto">Contáctanos</h3>
-	<p class="margin-bottom-20">Disfruta de los beneficios de tener páneles solares <br>¡Nosotros te ayudamos!</p>
-	<div id="form-contacto" class="max-width-500 margin-auto">
+	<h3 class="margin-bottom-30 max-width-600 margin-auto wow fadeInLeft">Contáctanos</h3>
+	<p class="margin-bottom-20 wow fadeIn">Disfruta de los beneficios de tener páneles solares <br>¡Nosotros te ayudamos!</p>
+	<div id="form-contacto" class="max-width-500 margin-auto wow fadeIn">
 		<?php echo do_shortcode('[contact-form-7 id="7" title="Contacto BH Solar"]'); ?>
 	</div>
 </section>

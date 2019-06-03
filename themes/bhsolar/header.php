@@ -57,9 +57,28 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
+		<div id="popUp" class="modal">
+			<div class="exit-modal"></div>
+			<div class="modal-content">
+				<div class="modal-body">
+					<em class="icon-cancel close-modal"></em>
+					<div class="row">
+						<div class="col s12 bg-image hide-on-med-and-up"></div>
+						<div class="col s12 m8 text-center content-newsletter">
+							<p class="font-strong uppercase margin-bottom-10">¡Quiero un panel de regalo!</p>
+							<p class="margin-bottom-20">Obtén un panel de regalo en la contratación de tu servicio</p>
+							<?php include (TEMPLATEPATH . '/template/newsletter.php'); ?>
+							<br>
+							<?php include (TEMPLATEPATH . '/template/redes.php'); ?>
+						</div>
+						<div class="col s12 m4 bg-image hide-on-sm-and-down"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<header class="js-header relative">
 			<div id="top-add">
-				<p><a href="<?php echo SITEURL; ?>#section-contacto">Calcula tu ahorro</a> al usar páneles solares</p>
+				<p class="bounceIn"><a href="<?php echo SITEURL; ?>#section-contacto">Calcula tu ahorro</a> al usar páneles solares</p>
 				<em id="close-add" class="icon-cancel cursor-pointer color-primary-dark-hover"></em>	
 			</div>
 		</header>

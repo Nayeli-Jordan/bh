@@ -25,9 +25,12 @@ require_once( 'inc/post-types.php' );
 add_action( 'wp_enqueue_scripts', function(){
  
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
+    /* Slider */
     wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cycle2.js', array(), '', true );
     wp_enqueue_script( 'shuffle_js', JSPATH.'jquery.cycle2.shuffle.js', array(), '', true );
-    wp_enqueue_script( 'easing_js', JSPATH.'jquery.easing.1.3.js', array(), '', true );
+    wp_enqueue_script( 'easing_js', JSPATH.'jquery.easing.1.3.js', array(), '', true );   
+    /* Animated */
+    wp_enqueue_script( 'wow_js', JSPATH.'wow.min.js', array(), '', true );
 	wp_enqueue_script( 'bhs_functions', JSPATH.'functions.js', array(), '1.0', true );
  
 	wp_localize_script( 'bhs_functions', 'siteUrl', SITEURL );

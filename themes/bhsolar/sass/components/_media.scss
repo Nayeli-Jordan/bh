@@ -2,10 +2,13 @@
 // ==========================================================================
 
 img.responsive-img,
-video.responsive-video,
-iframe.responsive-iframe {
+video.responsive-video {
   max-width: 100%;
   height: auto;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 .centerfull-image {
@@ -41,7 +44,6 @@ iframe.responsive-iframe {
 }
 
 #page-banner {
-	background-image: url(../images/celdas-solares-page.jpg);
 	background-position: center bottom;
 	img { width: 400px; }
 }
