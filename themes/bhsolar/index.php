@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="initial-banner" class="bg-image text-center padding-top-130 padding-bottom-190">
+<section id="initial-banner" class="bg-image text-center padding-top-130 padding-bottom-190" style="background-image: url('<?php echo THEMEPATH; ?>images/celdas-solares-inicio.jpg')">
 	<div class="container">
 		<img class="responsive-img margin-bottom-30" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
 		<h2 class="uppercase color-primary-dark max-width-600 margin-auto"><strong>Caminemos juntos hacia la energía sustentable</strong></h2>		
@@ -8,12 +8,25 @@
 <section class="container text-center padding-top-bottom-60">
 	<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto">Generar tu propia energía está al alcance de tus manos</p>
 	<p>Somos una empresa de sistemas solares para casas y comercios. Nuestros clientes usan el sol como una fuente limpia e inagotable para consumir electricidad a un costo sustancialmente menor, con mayor claridad y una estupenda esperiencia. Esto lo logramos con una plataforma tecnológica comprobada. <br>Infinitamente orgullosos de ser parte del cambio.</p>
-	<!-- slides - carousel -->
+	<div class="max-width-600 margin-auto margin-top-20">
+		<div class="cycle-slideshow" data-cycle-fx=shuffle data-cycle-speed=1500 data-cycle-easing=easeInOutBack data-cycle-ease-out=easeOutBack data-cycle-timeout=2000 data-cycle-slides="> div">
+			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares1.jpg')"></div>
+			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares2.jpg')"></div>
+			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares3.jpg')"></div>
+			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares4.jpg')"></div>
+			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares5.jpg')"></div>
+			<div class="bg-image padding-bottom-60p width-100p" style="background-image: url('<?php echo THEMEPATH; ?>images/paneles-solares6.jpg')"></div>
+		</div>
+	</div>
 </section>
 <section class="bg-primary-light text-center padding-top-bottom-60">
 	<div class="container">
 		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto color-light">¿Cómo funcionan los páneles solares?</p>
-		<iframe class="responsive-iframe width-100p" src="https://www.youtube.com/embed/pFJ96wUZT7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="row">
+			<div class="col s12 m10 offset-m1 l8 offset-l2">
+				<iframe class="width-100p" src="https://www.youtube.com/embed/pFJ96wUZT7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
 	</div>
 </section>
 <section class="container text-center padding-top-60 padding-bottom-30">
@@ -37,7 +50,7 @@
 				<p>Toda la energía solar generada y sin uso, va de regreso a la red eléctrica del servicio BH Solar y se convierte en ahorros para ti</p>
 			</div>
 		</div>
-		<p>Cámbiate a energía solar y <a href="#" class="color-primary-light text-underline">empieza a ahorrar hoy</a></p>
+		<p>Cámbiate a energía solar y <a href="<?php echo SITEURL; ?>#section-contacto" class="color-primary-light text-underline">empieza a ahorrar hoy</a></p>
 	</div>
 </section>
 <section class="container padding-top-bottom-60">
@@ -82,7 +95,7 @@
 		</div>
 	</div>
 </section>
-<section class="container text-center padding-top-bottom-60">
+<section id="section-contacto" class="container text-center padding-top-bottom-60">
 	<h3 class="margin-bottom-30 max-width-600 margin-auto">Contáctanos</h3>
 	<p class="margin-bottom-20">Disfruta de los beneficios de tener páneles solares <br>¡Nosotros te ayudamos!</p>
 	<div id="form-contacto" class="max-width-500 margin-auto">

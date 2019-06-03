@@ -59,7 +59,7 @@
 	<body>
 		<header class="js-header relative">
 			<div id="top-add">
-				<p><a href="#">Calcula tu ahorro</a> al usar páneles solares</p>
+				<p><a href="<?php echo SITEURL; ?>#section-contacto">Calcula tu ahorro</a> al usar páneles solares</p>
 				<em id="close-add" class="icon-cancel cursor-pointer color-primary-dark-hover"></em>	
 			</div>
 		</header>

@@ -3,7 +3,8 @@
 
 input:not([type="submit"]),
 select,
-textarea {
+textarea,
+#mc_embed_signup input.email {
 	padding: 0 10px;
 	width: 100%;	
 	max-width: 100%;
@@ -21,13 +22,6 @@ textarea {
 	height: 100px;
 	line-height: 22px;
 	resize: none;
-}
-input[type="submit"] {
-    display: block;
-    line-height: 35px;
-    border-radius: 3px;
-    background-color: $primary-color-light;
-    @extend .shadow;
 }
 
 //Hide button input date
@@ -52,6 +46,7 @@ input[type="submit"] {
 	textarea {
 		margin-top: 15px;
 	}
+	label { color: gray; }
 	input[type="submit"] {
 		margin-top: 10px;
 		@extend .margin-auto;
@@ -69,4 +64,17 @@ input[type="submit"] {
 		@extend .font-semibold;
 		border: 0px;
 	}
+}
+
+/* Mailchimp */
+
+#mc_embed_signup {
+	form {
+		padding: 0px!important;
+		input.email {
+			width: 100%!important;
+			text-align: left;
+			border-radius: 0px!important;
+		}
+	}	
 }

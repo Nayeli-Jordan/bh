@@ -36,11 +36,14 @@ iframe.responsive-iframe {
 
 
 #initial-banner {
-	background-image: url(../images/celdas-solares-inicio.jpg);
 	img { width: 400px; }
-	h2 {
-		font-size: 24px;
-	}
+	h2 { font-size: 24px; }
+}
+
+#page-banner {
+	background-image: url(../images/celdas-solares-page.jpg);
+	background-position: center bottom;
+	img { width: 400px; }
 }
 
 #bg-paneles-solares {
