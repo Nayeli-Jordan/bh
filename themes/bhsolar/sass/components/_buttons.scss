@@ -22,3 +22,9 @@ input[type="submit"] {
 		background-color: $primary-color!important;
 	}
 }
+
+#tidio-chat-iframe {
+	bottom: -20px!important;
+    right: -15px!important;
+    width: 90px;
+}

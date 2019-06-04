@@ -6169,6 +6169,11 @@
   max-width: 600px;
 }
 
+/* line 63, ../sass/components/_box-model.scss */
+.max-width-800 {
+  max-width: 800px;
+}
+
 /* line 4, ../sass/components/_buttons.scss */
 .btn,
 button,
@@ -6192,6 +6197,13 @@ input[type="submit"] {
 button:hover,
 input[type="submit"]:hover {
   background-color: #056564 !important;
+}
+
+/* line 26, ../sass/components/_buttons.scss */
+#tidio-chat-iframe {
+  bottom: -20px !important;
+  right: -15px !important;
+  width: 90px;
 }
 
 /* line 4, ../sass/components/_color.scss */
@@ -6252,6 +6264,11 @@ input[type="submit"]:hover {
 /* line 22, ../sass/components/_color.scss */
 .bg-opacity-light {
   background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* line 23, ../sass/components/_color.scss */
+.bg-opacity-xlight {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* line 17, ../sass/components/_effects.scss */
@@ -7637,6 +7654,25 @@ ul li {
   /* line 23, ../sass/components/_grid.scss */
   .row .col.push-xl12 {
     left: 100%;
+  }
+}
+
+@media only screen and (min-width: 431px) and (max-width: 600px) {
+  /* line 157, ../sass/components/_grid.scss */
+  #blog_bhs .col:nth-child(2n+1) {
+    clear: both !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* line 158, ../sass/components/_grid.scss */
+  #blog_bhs .col:nth-child(3n+1) {
+    clear: both !important;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 159, ../sass/components/_grid.scss */
+  #blog_bhs .col:nth-child(4n+1) {
+    clear: both !important;
   }
 }
 
@@ -12259,7 +12295,7 @@ a {
   transition: 0.3s ease-out;
 }
 /* line 11, ../sass/components/_typography.scss */
-a:hover {
+a:not(.btn):hover {
   text-decoration: underline;
   color: #013232;
 }

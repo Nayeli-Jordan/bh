@@ -152,3 +152,9 @@
     }
   }
 }
+
+#blog_bhs .col {
+  @media #{$sm-only} { &:nth-child(2n+1) { clear: both!important; } }
+  @media #{$medium-only} { &:nth-child(3n+1) { clear: both!important; } }
+  @media #{$large-and-up} { &:nth-child(4n+1) { clear: both!important; } }
+}
