@@ -10,12 +10,12 @@
 						<div class="col s12 m6 l4 margin-bottom-20">
 							<p class="uppercase margin-bottom-10"><strong>Contáctanos</strong></p>
 							<a href="tel:+525568375020"><em class="icon-phone"></em> 5568375020</a><br>
-							<a href="mailto:contacto@bhsolar.com"><em class="icon-mail-alt"></em> contacto@bhsolar.com</a>
+							<a href="mailto:info@bhsolar.mx"><em class="icon-mail-alt"></em> info@bhsolar.mx</a>
 							<?php include (TEMPLATEPATH . '/template/redes.php'); ?>
 						</div>
 						<div class="col s12 m12 l5 margin-bottom-20">
 							<p class="uppercase margin-bottom-10"><strong>Mantente informado</strong></p>
-							<p>Recibe noticias, promociones y novedades de eventos sobre instalación de páneles solares</p>
+							<p>Recibe noticias, promociones y novedades de eventos sobre instalación de paneles solares</p>
 							<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 							<?php include (TEMPLATEPATH . '/template/newsletter.php'); ?>
 						</div>

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<section id="initial-banner" class="bg-image text-center padding-top-130 padding-bottom-190" style="background-image: url('<?php echo get_the_post_thumbnail_url(35, "large"); ?>')">
+<section id="initial-banner" class="bg-image bg-center-bottom  text-center padding-top-50 padding-bottom-270" style="background-image: url('<?php echo get_the_post_thumbnail_url(35, "full"); ?>')">
 	<div class="container">
 		<img class="responsive-img margin-bottom-30 wow fadeIn" src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
-		<h2 class="uppercase color-primary-dark max-width-600 margin-auto wow fadeInLeft"><strong><?php echo get_the_title(35); ?></strong></h2>		
+		<h2 class="uppercase color-primary-dark max-width-600 margin-auto wow fadeInLeft text-shadow"><strong><?php echo get_the_title(35); ?></strong></h2>		
 	</div>
 </section>
 <?php 
@@ -35,13 +35,11 @@
 	$post 		= get_post($id); 
 	$content 	= apply_filters('the_content', $post->post_content);
 ?>
-<section class="bg-primary-light text-center padding-top-bottom-60">
+<section class="bg-gradient-primary-light text-center padding-top-bottom-60">
 	<div class="container">
 		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft color-light"><?php echo get_the_title(37); ?></p>
-		<div class="row">
-			<div class="col s12 m10 offset-m1 l8 offset-l2 wow fadeIn">
-				<?php echo $content; ?>
-			</div>
+		<div class="max-width-800 margin-auto">
+			<?php echo $content; ?>
 		</div>
 	</div>
 </section>
@@ -49,7 +47,7 @@
 	<p class="font-size-medium font-semibold max-width-600 margin-auto wow fadeInLeft"><?php echo get_the_title(38); ?></p>
 	<em class="icon-leaf icon-superlarge block wow slideInUp"></em>
 </section>
-<section class="bg-primary color-light text-center padding-top-bottom-60">
+<section class="bg-gradient-primary color-light text-center padding-top-bottom-60">
 	<div class="container">
 		<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft"><?php echo get_the_title(39); ?></p>
 		<div class="row margin-bottom-10">
@@ -93,7 +91,7 @@
 		while ( $faqs_query->have_posts() ) : $faqs_query->the_post(); 
 			$post_id = get_the_ID();?>
 			<div id="faq_<?php echo $post_id; ?>" class="item-faq">
-				<h3><?php the_title(); ?></h3>
+				<h4 class="font-normal"><?php the_title(); ?></h4>
 				<div class="content-faq"><?php the_content(); ?></div>
 			</div>			
 		<?php $i ++; endwhile; wp_reset_postdata();
@@ -131,7 +129,7 @@
 </section>
 <section id="section-contacto" class="container text-center padding-top-bottom-60">
 	<h3 class="margin-bottom-30 max-width-600 margin-auto wow fadeInLeft">Contáctanos</h3>
-	<p class="margin-bottom-20 wow fadeIn">Disfruta de los beneficios de tener páneles solares <br>¡Nosotros te ayudamos!</p>
+	<p class="margin-bottom-20 wow fadeIn">Obtén un panel de regalo en la contratación de tu servicio <br>Disfruta de los beneficios de tener energía solar <br>¡Nosotros te ayudamos!</p>
 	<div id="form-contacto" class="max-width-500 margin-auto wow fadeIn">
 		<?php echo do_shortcode('[contact-form-7 id="7" title="Contacto BH Solar"]'); ?>
 	</div>

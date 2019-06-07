@@ -19,10 +19,14 @@
 				while ( $blog_query->have_posts() ) : $blog_query->the_post(); 
 					$post_id = get_the_ID();?>
 					<div class="col s12 sm6 m4 l3 margin-bottom-20">
-						<a href="<?php echo the_permalink(); ?>"><div class="bg-image padding-bottom-60p margin-bottom-10" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div></a>
-						<h3 class="margin-bottom-10 text-center"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<div class="margin-bottom-20"><?php the_excerpt(); ?></div>
-						<div class="text-right"><a href="<?php echo the_permalink(); ?>" class="btn inline-block">Ver más <em class="icon-right-open"></em></a></div>
+						<div class="card-post">
+							<a href="<?php echo the_permalink(); ?>"><div class="bg-image padding-bottom-60p margin-bottom-10" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div></a>
+							<div class="card-box-content">
+								<h3 class="margin-bottom-10 text-center"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<div class="margin-bottom-20"><?php the_excerpt(); ?></div>
+								<div class="text-right"><a href="<?php echo the_permalink(); ?>" class="btn inline-block">Ver más <em class="icon-right-open"></em></a></div>
+							</div>
+						</div>
 					</div>					
 				<?php $i ++; endwhile; wp_reset_postdata();
 			endif;  ?>

@@ -25,8 +25,9 @@ iframe {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  &.bg-contain { background-size: contain; }
-  &.bg-repeat { background-repeat: repeat; }
+  &.bg-contain 			{ background-size: contain; }
+  &.bg-repeat 			{ background-repeat: repeat; }
+  &.bg-center-bottom 	{ background-position: center bottom; }
 }
 
 .bg-responsive { max-width: 100%; }

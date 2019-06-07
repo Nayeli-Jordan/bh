@@ -55,6 +55,8 @@
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
+
+		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/95e8587d777bd062626dfc68e/5fa51db18c9bd31a7d28f5cba.js");</script>
 	</head>
 	<body>
 		<div id="popUp" class="modal">
@@ -78,7 +80,7 @@
 		</div>
 		<header class="js-header relative">
 			<div id="top-add">
-				<p class="bounceIn"><a href="<?php echo SITEURL; ?>#section-contacto">Calcula tu ahorro</a> al usar páneles solares</p>
+				<p class="bounceIn"><a href="<?php echo SITEURL; ?>#section-contacto">Calcula tu ahorro</a> al usar paneles solares</p>
 				<em id="close-add" class="icon-cancel cursor-pointer color-primary-dark-hover"></em>	
 			</div>
 		</header>

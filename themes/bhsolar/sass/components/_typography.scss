@@ -43,7 +43,7 @@ p {
 em                            { font-style: italic; }
 small                         { font-size: 75%; }
 
-.font-normal                  { font-weight: $font-default; }
+.font-normal                  { font-family: $font-default; }
 .font-semibold                { font-family: $font-default-semibold; }
 .font-strong, strong          { font-family: $font-default-bold; }
 
