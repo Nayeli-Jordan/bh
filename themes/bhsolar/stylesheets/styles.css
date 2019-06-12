@@ -6924,7 +6924,7 @@ input[type="submit"]:hover {
 /* line 17, ../sass/components/_effects.scss */
 .shadow, .btn,
 button,
-input[type="submit"], .icon-fondo, .faqs {
+input[type="submit"], .icon-fondo {
   box-shadow: 4px 4px 13px 0 rgba(84, 84, 84, 0.37);
 }
 
@@ -13118,35 +13118,21 @@ small {
   border-top: 1px solid #b2b2b2;
 }
 
-/* line 7, ../sass/components/_utilities.scss */
-.faqs {
-  max-height: 450px;
-  overflow: auto;
-}
-/* line 11, ../sass/components/_utilities.scss */
-.faqs::-webkit-scrollbar {
-  width: 8px;
-}
-/* line 14, ../sass/components/_utilities.scss */
-.faqs::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-/* line 18, ../sass/components/_utilities.scss */
+/* line 8, ../sass/components/_utilities.scss */
 .faqs .item-faq {
   border-bottom: 1px solid #e1e1e1;
 }
-/* line 20, ../sass/components/_utilities.scss */
+/* line 10, ../sass/components/_utilities.scss */
 .faqs .item-faq h4 {
   padding: 15px 25px;
   font-weight: 400;
   cursor: pointer;
 }
-/* line 24, ../sass/components/_utilities.scss */
+/* line 14, ../sass/components/_utilities.scss */
 .faqs .item-faq h4:hover {
   color: #056564;
 }
-/* line 26, ../sass/components/_utilities.scss */
+/* line 16, ../sass/components/_utilities.scss */
 .faqs .item-faq .content-faq {
   display: none;
   padding: 10px 20px;
@@ -13154,21 +13140,21 @@ small {
   -ms-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
-/* line 31, ../sass/components/_utilities.scss */
+/* line 21, ../sass/components/_utilities.scss */
 .faqs .item-faq.active {
   background-color: #f3f3f3;
 }
-/* line 34, ../sass/components/_utilities.scss */
+/* line 24, ../sass/components/_utilities.scss */
 .faqs .item-faq.active .content-faq {
   display: block;
 }
 
-/* line 39, ../sass/components/_utilities.scss */
+/* line 29, ../sass/components/_utilities.scss */
 .card-post {
   border-radius: 3px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
-/* line 42, ../sass/components/_utilities.scss */
+/* line 32, ../sass/components/_utilities.scss */
 .card-post .card-box-content {
   padding: 10px 20px 20px 20px;
 }

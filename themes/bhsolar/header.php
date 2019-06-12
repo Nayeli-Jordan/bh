@@ -68,7 +68,7 @@
 						<div class="col s12 bg-image hide-on-med-and-up"></div>
 						<div class="col s12 m8 text-center content-newsletter">
 							<p class="font-strong uppercase margin-bottom-10">¡Quiero un panel de regalo!</p>
-							<p class="margin-bottom-20">Obtén un panel de regalo en la contratación de tu servicio</p>
+							<p class="margin-bottom-20"><a href="<?php echo SITEURL ?>condiciones" target="_blank" class="text-underline">Obtén un panel de regalo</a> en la contratación de tu servicio</p>
 							<?php include (TEMPLATEPATH . '/template/newsletter.php'); ?>
 							<br>
 							<?php include (TEMPLATEPATH . '/template/redes.php'); ?>

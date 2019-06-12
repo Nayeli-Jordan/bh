@@ -5,6 +5,7 @@
 							<p class="uppercase margin-bottom-10"><strong>BHSolar</strong></p>
 							<p><a href="<?php echo THEMEPATH; ?>docs/testimonios.pdf">Testimonios</a></p>
 							<p><a href="<?php echo SITEURL; ?>">Financiamiento</a></p>
+							<p><a href="<?php echo SITEURL; ?>preguntas-frecuentes">Preguntas frecuentes</a></p>
 							<p><a href="<?php echo SITEURL; ?>blog">Blog</a></p>
 						</div>
 						<div class="col s12 m6 l4 margin-bottom-20">

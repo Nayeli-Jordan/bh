@@ -76,28 +76,6 @@
 		<p class="wow fadeInRight">Cámbiate a energía solar y <a href="<?php echo SITEURL; ?>#section-contacto" class="color-primary-light text-underline">empieza a ahorrar hoy</a></p>
 	</div>
 </section>
-<section class="container padding-top-bottom-60">
-	<p class="font-size-medium font-semibold margin-bottom-30 max-width-600 margin-auto wow fadeInLeft text-center">Preguntas frecuentes</p>
-	<div class="faqs wow fadeIn">
-	<?php
-	$faqs_args = array(
-		'post_type' 		=> 'faqs',
-		'posts_per_page' 	=> -1,
-		'order'				=> 'ASC',
-	);
-	$faqs_query = new WP_Query( $faqs_args );
-	if ( $faqs_query->have_posts() ) : 
-		$i = 1;
-		while ( $faqs_query->have_posts() ) : $faqs_query->the_post(); 
-			$post_id = get_the_ID();?>
-			<div id="faq_<?php echo $post_id; ?>" class="item-faq">
-				<h4 class="font-normal"><?php the_title(); ?></h4>
-				<div class="content-faq"><?php the_content(); ?></div>
-			</div>			
-		<?php $i ++; endwhile; wp_reset_postdata();
-	endif;  ?>
-	</div>
-</section>
 <section id="bg-paneles-solares" class="bg-image text-center padding-top-60 padding-bottom-40 relative">
 	<div class="bg-absolute bg-opacity-light"></div>
 	<div class="container relative">
